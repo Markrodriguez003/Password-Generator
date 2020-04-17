@@ -1,0 +1,28 @@
+body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+body{
+    /* background: #0E00A9;
+    background: -moz-linear-gradient(top, #0E00A9 0%, #0F00B8 50%, #0C008D 100%);
+    background: -webkit-linear-gradient(top, #0E00A9 0%, #0F00B8 50%, #0C008D 100%);
+    background: linear-gradient(to bottom, #0E00A9 0%, #0F00B8 50%, #0C008D 100%); */
+}
+
+.bg-img{
+
+    background: #0E00A9;
+    background-image:url(imgs/bg01.jpg);
+    background-blend-mode: lighten;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+    background-position: center;
+      background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,12 @@
+IDEAS FOR PASSWORD GENERATOR
+
+
+++ Add a way of using pressing a badge/icon to copy password to clipboard
+++ Add modal when ^^ happens that can exit when clicking out and pressing esc
+++ Add checkboxes to enable added symbols / Upper Case / Lower Case / Numbers / Spaces / 
+Have password include a certain word (added by user)
+++ Add timer to with "Generating password" maybe with scroll animation?
+
+
+++ Add a loop to check to see if user just clicks on the copy password btn that if it's empty/null/undefined that it shoots 
+an error out and loops
