@@ -1,12 +1,16 @@
 IDEAS FOR PASSWORD GENERATOR
 
 
-++ Add a way of using pressing a badge/icon to copy password to clipboard
-++ Add modal when ^^ happens that can exit when clicking out and pressing esc
+++ Add a way of using pressing a badge/icon to copy password to clipboard (done-need to implement js)
+++ Add modal when ^^ happens that can exit when clicking out and pressing esc 
 ++ Add checkboxes to enable added symbols / Upper Case / Lower Case / Numbers / Spaces / 
-Have password include a certain word (added by user)
-++ Add timer to with "Generating password" maybe with scroll animation?
-
-
+Have password include a certain word (added by user) (done - need to implement js)
+++ Add timer to with "Generating password" maybe with scroll animation? maybe with a modal?
+++ Have the unlocked icon turn into a lock icon on top whgen generate button delivers password
+++ Have a mini # carousel/pagination for length of password. Cap it at 18. Next to it add a button that engages another
+field (from hidden) to enter a custom number amount  max 45. Use the increment/decrement solution created 2 days ago.
+++ Have a error loop 
 ++ Add a loop to check to see if user just clicks on the copy password btn that if it's empty/null/undefined that it shoots 
 an error out and loops
+++ Create an event onclick for generate button to flash green instead of :active psuedo class. Slow animation.
+++ Change log/scratchpad files to .MD (markdown file) instead of .txt

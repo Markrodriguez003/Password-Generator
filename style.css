@@ -1,28 +1,101 @@
-body, html {
-    height: 100%;
-  }
   
   * {
     box-sizing: border-box;
   }
+  :root{
+    font-family: 'Mada', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    --mainColor: rgb(26, 83, 189);
+    --secondaryColor: rgb(34, 66, 124);
+    --tertiaryColor: rgb(28, 173, 117);
+  }
+  
+/* ENTIRE BODY OF PAGE */
 body{
-    /* background: #0E00A9;
-    background: -moz-linear-gradient(top, #0E00A9 0%, #0F00B8 50%, #0C008D 100%);
-    background: -webkit-linear-gradient(top, #0E00A9 0%, #0F00B8 50%, #0C008D 100%);
-    background: linear-gradient(to bottom, #0E00A9 0%, #0F00B8 50%, #0C008D 100%); */
-}
-
-.bg-img{
-
-    background: #0E00A9;
+  background: #303030;
+/*  background: -moz-linear-gradient(top, #303030 0%, #1A1A1A 50%, #404040 100%);
+    background: -webkit-linear-gradient(top, #303030 0%, #1A1A1A 50%, #404040 100%);
+    background: linear-gradient(to bottom, #303030 0%, #1A1A1A 50%, #404040 100%); */
     background-image:url(imgs/bg01.jpg);
-    background-blend-mode: lighten;
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
+    background-blend-mode: soft-light;
+    height: 100%;
     background-position: center;
-      background-repeat: no-repeat;
+    background-repeat:no-repeat;
     background-size: cover;
 }
+
+body, html {
+  height: 100%;
+}
+
+/* PASSWORD CONTAINER FORM */
+.bgContainer{
+ 
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 50px 4px rgba(0,0,0,0.36); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 50px 4px rgba(0,0,0,0.36);
+  opacity: 0.92;
+}
+
+/* HEADER TITLE*/
+.hTitle{
+  font-family: 'Mada', sans-serif;
+  color:var(--mainColor);
+  letter-spacing: 3.2px;
+  word-spacing: 6px;
+  background: #FFFFFF;
+  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+}
+
+/* CHECKBOX + SUBMIT BTN STYLING  */
+.chk-bg-color, .btn-bg-color{
+  background-color:var(--mainColor);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* CHECKBOX + SUBMIT BTN HOVER STYLING  */
+.chk-bg-color:hover, .btn-bg-color:hover{
+  background-color:var(--secondaryColor);
+  border: 2px var(--mainColor) solid;
+  cursor:pointer ;
+  text-decoration: underline;
+}
+
+/* .chk-bg-color:active{
+  background-color:white;
+  color: var(--mainColor) !important;
+  border: 2px var(--mainColor) solid;
+  cursor:pointer ;
+  text-decoration: underline;
+} */
+
+/* SUBMIT BTN HOVER - FONT SCALE */
+.btn-bg-color:active{
+  font-size: 20px;
+  text-decoration: none;
+  border: green 2px solid;
+  background-color: var(--tertiaryColor);
+}
+/* SUCCESSFUL COPIED PASSWORD / OPTIONS SELECT FAILURE TEXT */
+.optionFailure, .copySuccessful{
+  font-size:16px;
+  text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
+  display:none;
+}
+ 
+/* SMALL OPTIONS TEXT ICON FLIP */
+.icon-flipped {
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+}
+ 
+/* PASSWORD TEXT CONTAINER */
+.footer{
+  display: inline-block;
+  position:absolute;
+  bottom: -6.5%;
+  background-color: var(--secondaryColor);
+}
+ 

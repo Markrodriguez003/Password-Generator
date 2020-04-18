@@ -4,62 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mark Anthony Patrick Rodriguez ">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mada:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+    <link rel="icon" type="image/ico" href="imgs/padlock-lock-secure-899664 (2).ico"/>
 </head>
 
 <body>
+    <br><br><br><br><br><br>
+    <div class="container bg-white bgContainer rounded border border-primary mt-4">
 
-    <div class="container-fluid bg-img">
+        <!-- PAGE HEADER TITLE -->
 
-        <h1 class="display-4 text-white text-center text-weight-bolder p-4 hTitle">
+        <h1 class="display-3 text-center text-weight-bolder mt-4  hTitle">
+            <!-- <svg class="bi bi-lock-fill mb-4 mr-2 pb-1 " width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <rect width="11" height="9" x="2.5" y="7" rx="2"/>
+                <path fill-rule="evenodd" d="M4.5 4a3.5 3.5 0 117 0v3h-1V4a2.5 2.5 0 00-5 0v3h-1V4z" clip-rule="evenodd"/>
+              </svg> -->
+            <svg class="bi bi-unlock-fill mb-4 pb-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"> <path d="M.5 9a2 2 0 012-2h7a2 2 0 012 2v5a2 2 0 01-2 2h-7a2 2 0 01-2-2V9z" />
+                <path fill-rule="evenodd" d= "M8.5 4a3.5 3.5 0 117 0v3h-1V4a2.5 2.5 0 00-5 0v3h-1V4z" clip-rule="evenodd" />
+            </svg>
             PASSWORD GENERATOR</h1>
-        <hr>
+        <hr><br>
 
-        <!-- Text Field -->
-        <div class="container border border-black bg-white text-center pt-4 pb-4 pr-0 text-black-50" id="passTxtArea">
-            Password Will generate here.
-        </div>
-                <button class="btn-sm" id = "copiedPass">Copy Password</button>
-                <br>
-                <!-- Options Bar -->
-                <div class="container text-center bg-white">
-                    Click on the options below to be included for your generated password 
-                </div>
-        <!-- Option Checkboxes -->
-        <div class="input-group mb-3 text-center">
-            <div class="input-group-prepend m-4">
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
-                    Symbols
-                </div>
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
-                    Numbers
-                </div>
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
-                    Upper Case Characters
-                </div>
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
-                    Lower Case Characters
-                </div>
-                <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
-                    Spaces
-                </div>
+        <form class="form-inline justify-content-center mb-4">
 
-            </div>
-        </div>
-        <div class="btnContainer mx-auto text-center" id="subBtn">
-            <button class="btn-lg">Generate Password</button>
+            <!-- PASSWORD TEXT FIELD -->
+            <input id = "passTxtField" type="text"
+                class="form-control form-control-lg mb-3 p-4 col-9 col-xs-9 col-sm-9 col-md-7 col-lg-7 col-xl-7 text-center  form-area"
+                value="Your password will be generated here." col="220" readonly>
+
+            <!-- COPY PASSWORD TO CLIPBOARD BTN -->
+            <button class="btn-sm form-area ml-2 " id="copiedPass"><svg class="bi bi-file-earmark-text" width="1.5em"
+                    height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4 1h5v1H4a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V6h1v7a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2z" />
+                    <path d="M9 4.5V1l5 5h-3.5A1.5 1.5 0 019 4.5z" />
+                    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2a.5.5 0 01-.5-.5zm0-2a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5zm0-2a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5z"
+                        clip-rule="evenodd" />
+                </svg><!-- <small> copy text</small> --></button><br><br>
+
+                <!-- SUCCESSFUL COPY OF GENERATED PASSWORD TO CLIPBOARD -->
+                <div class="container bg-success text-white border border-success text-center text-weight-bold  pt-2 pb-2 copySuccessful"> 
+                    Password copied to clipboard</div>
+
+                <!-- FAILURE TO SELECT PROPER OPTIONS TEXT -->
+                <div class="container text-white bg-danger border border-danger text-center text-weight-bold pt-2 pb-2 optionFailure"> 
+                    Error: Please choose an option(s) below</div>
+
+            <!-- OPTIONS SMALL TEXT -->
+            <div class="container text-center bg-white font-italic mt-4 mb-2">
+                <svg class="bi bi-arrow-90deg-down" width="1.3em" height="1.3em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2.646 9.646a.5.5 0 01.708 0L6 12.293l2.646-2.647a.5.5 0 11.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z"
+                        clip-rule="evenodd" />
+                    <path fill-rule="evenodd"
+                        d="M6 13a.5.5 0 01-.5-.5V6A2.5 2.5 0 018 3.5h5.5a.5.5 0 010 1H8A1.5 1.5 0 006.5 6v6.5a.5.5 0 01-.5.5z"
+                        clip-rule="evenodd" />
+                </svg>
+                Check the options below to be included for your generated password
+                <svg class="bi bi-arrow-90deg-down icon-flipped " width="1.3em" height="1.3em" viewBox="0 0 16 16"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2.646 9.646a.5.5 0 01.708 0L6 12.293l2.646-2.647a.5.5 0 11.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z"
+                        clip-rule="evenodd" />
+                    <path fill-rule="evenodd"
+                        d="M6 13a.5.5 0 01-.5-.5V6A2.5 2.5 0 018 3.5h5.5a.5.5 0 010 1H8A1.5 1.5 0 006.5 6v6.5a.5.5 0 01-.5.5z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div> <br>
+
+            <!-- MINI CAROUSEL FOR # OF CHARACTERS IN PASSWORD Min: 5 MAX 24 -->
+
+             <!-- OPTION CHECKBOX FORM -->
+             <div class="d-inline-block">
+                 <div class="custom-control custom-switch p-3">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label pr-3" for="customSwitch1">Symbols</label>
+                </div>
+                <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input"   id="customSwitch2">
+                <label class="custom-control-label pr-3" for="customSwitch2">Numbers</label>
+                </div>
+                <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input"   id="customSwitch3">
+                <label class="custom-control-label pr-3" for="customSwitch3">Spaces</label>
+                </div>
+                <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input"   id="customSwitch4">
+                <label class="custom-control-label pr-3" for="customSwitch4">Uppercase</label>
+                </div>
+                <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input"   id="customSwitch5">
+                <label class="custom-control-label pr-3" for="customSwitch5">LowerCase</label>
+                </div>
+             </div>
+                
+        </form>
+
+        <!-- CUSTOM WORD ENTRY FIELD -->
+        
+         <!-- BUTTON TO GENERATE RANDOM PASSWORD -->
+         <div class="btnContainer mx-auto text-center mb-4" id="subBtn">
+            <button type="button" class="btn btn-lg text-white btn-bg-color mb-4">Generate Password</button>
 
         </div>
     </div>
+    <br><br><br> 
+    
+    <footer class="footer fixed-bottom text-white text-center p-3 mt-4 pt-3">
+        <small> Password Generator &copy; 2020 - Mark Anthony Patrick Rodriguez  | </small> 
+        <a href="mailto:markrodriguez003@gmail.com" class="text-white">Contact</a> 
+        <br><br>
+        <small class="lead mt-1">Want to view my other projects? Check out my github!</small>
+        <a href="#portolio-site (me.github.io?)" class ="mb-4">Portfolio</a>
+    </footer>
 
+<script src="script.js"></script>
 </body>
 
 </html>
