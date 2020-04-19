@@ -76,13 +76,33 @@ body, html {
   background-color: var(--tertiaryColor);
 }
 /* SUCCESSFUL COPIED PASSWORD / OPTIONS SELECT FAILURE TEXT */
-.optionFailure, .copySuccessful{
+#optionFailure{
   font-size:16px;
   text-decoration: underline;
   font-family: 'Roboto', sans-serif;
   display:none;
 }
- 
+/* SUCCESSFUL COPIED PASSWORD */
+#optionSuccessful{
+  font-size:16px;
+  text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
+  display:none;
+}
+
+#copySuccessful{
+  font-size:16px;
+  text-decoration: underline;
+  font-family: 'Roboto', sans-serif;
+  display:none;
+}
+
+#passTxtField{
+
+  resize: none;
+
+}
+
 /* SMALL OPTIONS TEXT ICON FLIP */
 .icon-flipped {
   transform: scaleX(-1);
@@ -98,4 +118,6 @@ body, html {
   bottom: -6.5%;
   background-color: var(--secondaryColor);
 }
- 
+.navigatorBtns{
+ margin-top: -30px;
+}

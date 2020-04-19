@@ -35,10 +35,11 @@
         <form class="form-inline justify-content-center mb-4">
 
             <!-- PASSWORD TEXT FIELD -->
-            <input id = "passTxtField" type="text"
-                class="form-control form-control-lg mb-3 p-4 col-9 col-xs-9 col-sm-9 col-md-7 col-lg-7 col-xl-7 text-center  form-area"
-                value="Your password will be generated here." col="220" readonly>
+            <textarea id = "passTxtField" type="textarea" placeholder="Your password will be generated here." 
+                class="form-control form-control-lg mb-3 p-1 col-9 col-xs-9 col-sm-9 col-md-7 col-lg-7 col-xl-7 text-center form-area"
+                  readonly  > Your password will be generated here</textarea>
 
+    
             <!-- COPY PASSWORD TO CLIPBOARD BTN -->
             <button class="btn-sm form-area ml-2 " id="copiedPass"><svg class="bi bi-file-earmark-text" width="1.5em"
                     height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -50,11 +51,14 @@
                 </svg><!-- <small> copy text</small> --></button><br><br>
 
                 <!-- SUCCESSFUL COPY OF GENERATED PASSWORD TO CLIPBOARD -->
-                <div class="container bg-success text-white border border-success text-center text-weight-bold  pt-2 pb-2 copySuccessful"> 
+                <div class="container bg-success text-white border border-success text-center text-weight-bold  pt-2 pb-2" id="optionSuccessful"> 
+                    Password Generated!</div>
+
+                <div class="container bg-success text-white border border-success text-center text-weight-bold  pt-2 pb-2" id="copySuccessful"> 
                     Password copied to clipboard</div>
 
                 <!-- FAILURE TO SELECT PROPER OPTIONS TEXT -->
-                <div class="container text-white bg-danger border border-danger text-center text-weight-bold pt-2 pb-2 optionFailure"> 
+                <div class="container text-white bg-danger border border-danger text-center text-weight-bold pt-2 pb-2" id ="optionFailure"> 
                     Error: Please choose an option(s) below</div>
 
             <!-- OPTIONS SMALL TEXT -->
@@ -80,36 +84,34 @@
                 </svg>
             </div> <br>
 
-            <!-- MINI CAROUSEL FOR # OF CHARACTERS IN PASSWORD Min: 5 MAX 24 -->
-
              <!-- OPTION CHECKBOX FORM -->
-             <div class="d-inline-block">
+                 
                  <div class="custom-control custom-switch p-3">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label pr-3" for="customSwitch1">Symbols</label>
+                <input type="checkbox" class="custom-control-input" id="symsChk">
+                <label class="custom-control-label pr-3" for="symsChk">Symbols</label>
                 </div>
                 <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input"   id="customSwitch2">
-                <label class="custom-control-label pr-3" for="customSwitch2">Numbers</label>
+                <input type="checkbox" class="custom-control-input"   id="numsChk">
+                <label class="custom-control-label pr-3" for="numsChk">Numbers</label>
                 </div>
                 <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input"   id="customSwitch3">
-                <label class="custom-control-label pr-3" for="customSwitch3">Spaces</label>
+                <input type="checkbox" class="custom-control-input"   id="uppersChk">
+                <label class="custom-control-label pr-3" for="uppersChk">Uppercase</label>
                 </div>
                 <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input"   id="customSwitch4">
-                <label class="custom-control-label pr-3" for="customSwitch4">Uppercase</label>
+                <input type="checkbox" class="custom-control-input"   id="lowersChk">
+                <label class="custom-control-label pr-3" for="lowersChk">LowerCase</label>
                 </div>
-                <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input"   id="customSwitch5">
-                <label class="custom-control-label pr-3" for="customSwitch5">LowerCase</label>
-                </div>
-             </div>
-                
-        </form>
+            </form> <br>
 
-        <!-- CUSTOM WORD ENTRY FIELD -->
-        
+            
+        <!-- USER CHARACTER # PAGINATION min 5 max 16-->
+            <ul class="pagination pagination-lg justify-content-center navigatorBtns">
+              <li class="page-item"><a class="page-link" id ="back"  href="#"><</a></li>
+              <li class="page-item"><a class="page-link" id ="chars" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" id ="forward" href="#">></a></li>
+            </ul>
+         <br>
          <!-- BUTTON TO GENERATE RANDOM PASSWORD -->
          <div class="btnContainer mx-auto text-center mb-4" id="subBtn">
             <button type="button" class="btn btn-lg text-white btn-bg-color mb-4">Generate Password</button>
@@ -118,14 +120,15 @@
     </div>
     <br><br><br> 
     
-    <footer class="footer fixed-bottom text-white text-center p-3 mt-4 pt-3">
+    <!-- FOOTER -->
+   <!--  <footer class="footer fixed-bottom text-white text-center p-3 mt-4 pt-3">
         <small> Password Generator &copy; 2020 - Mark Anthony Patrick Rodriguez  | </small> 
         <a href="mailto:markrodriguez003@gmail.com" class="text-white">Contact</a> 
         <br><br>
         <small class="lead mt-1">Want to view my other projects? Check out my github!</small>
         <a href="#portolio-site (me.github.io?)" class ="mb-4">Portfolio</a>
     </footer>
-
+ -->
 <script src="script.js"></script>
 </body>
 
